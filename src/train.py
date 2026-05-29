@@ -16,7 +16,7 @@ def train_model(df_features: pd.DataFrame, config: dict):
     group_col = config['pipeline']['group_col']
 
     # Exclude metadata from features
-    exclude_cols = [target_col, group_col, "bank_name"]
+    exclude_cols = [target_col, group_col, "bank_name", "recurring_share", "mcc_7311_share"]
     features = [c for c in df_features.columns if c not in exclude_cols]
 
     X = df_features[features]
@@ -59,7 +59,7 @@ def train_model(df_features: pd.DataFrame, config: dict):
 
     os.makedirs(config['paths']['model_dir'], exist_ok=True)
     model_path = os.path.join(config['paths']['model_dir'], "lgbm_master.joblib")
-    joblib.dump(final_model, model_path)
+    joblib.dump({"model": final_model, "features": features}, model_path)
     logger.info(f"Model serialized and saved to {model_path}")
 
     return final_model
