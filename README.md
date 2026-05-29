@@ -23,7 +23,7 @@ mastercard_ml/
 │   ├── raw/
 │   │   ├── business_cards_MDQ.parquet
 │   │   ├── consumer_cards_MDQ.parquet
-│   │   └── mercedes_cards_MDQ.parquet
+│   │   └── merchants_reference.parquet
 │   └── processed/
 ├── logs/
 ├── models/
