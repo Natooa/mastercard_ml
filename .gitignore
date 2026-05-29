@@ -1,0 +1,8 @@
+data/
+models/
+logs/
+*.parquet
+*.joblib
+*.pyc
+.idea/
+__pycache__/
