@@ -13,7 +13,8 @@ The project is designed for large-scale parquet datasets and optimized for memor
 
 ---
 
-# Project Structure
+# Project structure (you must upload your dataset to the raw folder, which is located in the data folder).
+P.S: Because you can't upload files larger than 100mb to GitHub.
 
 ```text
 mastercard_ml/
