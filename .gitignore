@@ -1,8 +1,26 @@
-data/
-models/
-logs/
+# Data files
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models
+models/*
+!models/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+
+# Parquet / ML artifacts
 *.parquet
 *.joblib
-*.pyc
-.idea/
-__pycache__/
+*.pkl
